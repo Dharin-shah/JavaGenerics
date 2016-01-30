@@ -53,6 +53,7 @@ public class TestRawType {
 		stamps_2.add(new Stamp(4));
 		/* Compile-time error. Wont allow non-stamp type to be added in the collection 
 		 * as it checks at compile-time  */
+		@SuppressWarnings("unused")
 		Stamp s;
 		//stamps_2.add(new Integer(4)); 
 		for(Iterator<Stamp> i = stamps_2.iterator(); i.hasNext();){
