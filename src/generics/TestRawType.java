@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-/** This Class Tests - Best Practices for using Generics by Avoiding raw types*/
+/** This Class Tests Best Practices for using Generics by Avoiding raw types */
 
 /* Class for Testing */
 class Stamp{
@@ -40,7 +40,7 @@ public class TestRawType {
 			Stamp s = (Stamp)i.next(); //Will Definitely Throw java.lang.ClassCastException
 		}
 		
-		/** To Avoid Run-time error which is what always wanted, 
+		/** To Avoid Run-time error which is what always desired, 
 		 * enforce type-check at compile time by avoiding raw type and parameterizing 
 		 * the generic type. 
 		 * */
@@ -59,5 +59,12 @@ public class TestRawType {
 		for(Iterator<Stamp> i = stamps_2.iterator(); i.hasNext();){
 			s = i.next(); //No Cast needed, Iterator is of Stamp.
 		}
+		
+		/** List of arbitrary Object type vs raw type */
+		
+		Collection<Object> object = new ArrayList<Object>();
+		object.add("Hello");
+		//String s = ()object.remove("Hello");
+		
 	}
 }
